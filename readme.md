@@ -16,6 +16,8 @@ Lookup callsigns! QSO uses the [callsign-gem](https://github.com/CodeBlock/calls
 
 ## Add
 
+Contacts are stored in an friendly YAML file.
+
     $ ./qso add kd0rwr
 
 ## List

@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+require 'thor'
+
+require File.expand_path('../lib/qso.rb', __FILE__)
+
+class QsoApp < Thor
+  map "-L" => :list
+
+  desc "search ", "search for callsign"
+  def search(callsign)
+    contact = Qso.search(callsign)
+    print format(contact)
+  end
+
+  desc "add", "add contact to the database"
+  def add(callsign)
+    Qso.add(callsign)
+  end
+
+  desc "list", "list contacts in the database"
+  def list(callsign=nil)
+    Qso.list(callsign).each do |contact|
+      puts format(contact)
+      puts
+    end 
+  end
+no_tasks {
+  def format(contact)
+    c = contact.current.callsign
+    c << ","
+    c << contact.current.operClass << " CLASS\n"
+    c << contact.name << "\n"
+    c << contact.address.line1 << "\n"
+    c << contact.address.line2 << "\n" if contact.address.line2
+  end
+}
+end
+
+QsoApp.start

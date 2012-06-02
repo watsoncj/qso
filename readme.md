@@ -2,9 +2,11 @@
 
 Your personal radio contact database
 
+[http://watsoncj.github.com/qso/](http://watsoncj.github.com/qso/)
+
 ## Search
 
-Find callsign's fast. QSO uses the [callsign-gem](https://github.com/CodeBlock/callsign-gem) to query the [Calllook.info](http://callook.info/) API.
+Lookup callsigns! QSO uses the [callsign-gem](https://github.com/CodeBlock/callsign-gem) to query the [Calllook.info](http://callook.info/) API.
 
     $ ./qso search kd0rwr
     KD0RWR, TECHNICIAN CLASS
@@ -31,4 +33,4 @@ Quickly see your contacts
     999 SITTER CT
     SECURITY, CO 80911
 
-## 73!
+# 73!

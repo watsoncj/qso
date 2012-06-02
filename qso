@@ -27,7 +27,7 @@ class QsoApp < Thor
 no_tasks {
   def format(contact)
     c = contact.current.callsign
-    c << ","
+    c << ", "
     c << contact.current.operClass << " CLASS\n"
     c << contact.name << "\n"
     c << contact.address.line1 << "\n"
